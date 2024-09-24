@@ -48,7 +48,6 @@ def next_life_stage(field)
         1
       else
         0
-
       end
     end
   end.to_a
@@ -69,6 +68,7 @@ end
 
 # runs the next block three times
 # method(argument) syntax
+#NB because puts only after next_life_stage has been used, does not print the original field, but versions 2-4
 3.times do
   field = next_life_stage(field)
   puts render(field)
